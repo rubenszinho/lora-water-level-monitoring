@@ -1,0 +1,7 @@
+paho-mqtt
+pymongo
+flask
+flask-socketio
+gunicorn
+eventlet
+flask-cors
