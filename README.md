@@ -1,29 +1,31 @@
-## Sobre o Projeto
+<kbd>[<img title="Português (Brasil)" alt="Português (Brasil)" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/br.svg" width="22">](README.pt_br.md)</kbd>
 
-Este projeto emprega a tecnologia LoRa para monitoramento eficaz de rios em zonas urbanas, com ênfase especial na prevenção e resposta a desastres naturais durante períodos de chuvas intensas. Construído de forma conteinerizada, o sistema é projetado para ser altamente portátil, permitindo fácil implantação em diferentes ambientes.
+## About the Project
 
-A arquitetura do projeto se divide em várias partes chave:
+This project utilizes LoRa technology for effective monitoring of rivers in urban areas, with a special emphasis on prevention and response to natural disasters during periods of heavy rainfall. Built in a containerized manner, the system is designed to be highly portable, allowing for easy deployment in different environments.
 
-- **Frontend (`lora-sensor-website`):** Responsável pela geração dos artefatos de interface de usuário, os quais são servidos pelo backend.
-- **Backend (Server-Side):** Desenvolvido em Flask e conteinerizado via Docker, este componente assegura a entrega eficiente do frontend e o gerenciamento de dados.
-- **Contêineres (Mosquitto, MongoDB, Server-Side):** Cada contêiner desempenha um papel crucial no sistema, desde o armazenamento de dados até a execução de serviços backend.
+The architecture of the project is divided into several key parts:
 
-## Componentes do Projeto
+- **Frontend (`lora-sensor-website`):** Responsible for generating user interface artifacts, which are served by the backend.
+- **Backend (Server-Side):** Developed in Flask and containerized via Docker, this component ensures efficient delivery of the frontend and data management.
+- **Containers (Mosquitto, MongoDB, Server-Side):** Each container plays a crucial role in the system, from data storage to backend service execution.
 
-- **Mosquitto Container:** Implementação do container Mosquitto para armazenamento de dados de sensores LoRa.
-- **Server-Side Container:** Configuração do container server-side para backend, rotas e serviço de frontend.
-- **lora-sensor-website Submodule:** Adicionado o submodule lora-sensor-website para o frontend do sistema de monitoramento.
+## Project Components
 
-## Automação da Configuração do Ambiente
+- **Mosquitto Container:** Mosquitto container implementation for storing LoRa sensor data.
+- **Server-Side Container:** Server-side container setup for backend, routes, and frontend service.
+- **lora-sensor-website Submodule:** Added the lora-sensor-website submodule for the monitoring system's frontend.
 
-O script de automação (`setup.sh`) é uma parte integral do projeto, simplificando a configuração do ambiente de contêineres. Para utilizar:
+## Environment Setup Automation
 
-1. **Posicionamento no Diretório:** Certifique-se de estar no diretório raiz do repositório.
-2. **Execução do Script:** Utilize o comando `./setup.sh` para iniciar a configuração automática dos contêineres.
-   - Isso inclui:
-     - Parar e remover contêineres existentes (a menos que seja passado `--dirty`).
-     - Criar e configurar a rede compartilhada (bridge network).
-     - Iniciar contêineres Mosquitto e MongoDB.
-     - Verificar e atualizar o frontend no submodule `lora-sensor-website`, reconstruindo-o se necessário.
-     - Construir e iniciar o contêiner server-side.
-3. **Uso da Opção `--dirty`:** Para evitar a reconstrução dos contêineres existentes, execute `./setup.sh --dirty`.
+The automation script (`setup.sh`) is an integral part of the project, simplifying the container environment setup. To use:
+
+1. **Directory Positioning:** Make sure you are in the root directory of the repository.
+2. **Script Execution:** Use the command `./setup.sh` to start the automatic container setup.
+   - This includes:
+     - Stopping and removing existing containers (unless `--dirty` is passed).
+     - Creating and configuring the shared network (bridge network).
+     - Starting Mosquitto and MongoDB containers.
+     - Checking and updating the frontend in the `lora-sensor-website` submodule, rebuilding it if necessary.
+     - Building and starting the server-side container.
+3. **Using the `--dirty` Option:** To avoid rebuilding existing containers, run `./setup.sh --dirty`.
