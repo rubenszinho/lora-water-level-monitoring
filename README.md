@@ -29,3 +29,7 @@ The automation script (`setup.sh`) is an integral part of the project, simplifyi
      - Checking and updating the frontend in the `lora-sensor-website` submodule, rebuilding it if necessary.
      - Building and starting the server-side container.
 3. **Using the `--dirty` Option:** To avoid rebuilding existing containers, run `./setup.sh --dirty`.
+
+## License
+
+This project is licensed under the GPL License. See the [LICENSE](LICENSE) file for details.

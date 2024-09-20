@@ -27,3 +27,7 @@ O script de automação (`setup.sh`) é uma parte integral do projeto, simplific
      - Verificar e atualizar o frontend no submodule `lora-sensor-website`, reconstruindo-o se necessário.
      - Construir e iniciar o contêiner server-side.
 3. **Uso da Opção `--dirty`:** Para evitar a reconstrução dos contêineres existentes, execute `./setup.sh --dirty`.
+
+## Licença
+
+Este projeto está licenciado sob a Licença GPL. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
