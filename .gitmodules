@@ -1,3 +1,6 @@
 [submodule "lora-sensor-website"]
 	path = lora-sensor-website
 	url = https://github.com/rubenszinho/lora-sensor-website.git
+[submodule "lora-communication-modules"]
+	path = lora-communication-modules
+	url = https://github.com/rubenszinho/lora-communication-modules
